@@ -244,7 +244,12 @@ const Component = ({
         throttleResize={0}
         throttleDrag={0}
         snappable={true}
-        bounds={{ left: 0, top: 0, right: 1024, bottom: 508 }}
+        bounds={{
+          left: 0,
+          top: 0,
+          right: parentBounds.width,
+          bottom: parentBounds.height,
+        }}
         onDrag={(e) => {
           updateMoveable(id, {
             top: e.top,
